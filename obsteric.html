@@ -1,0 +1,377 @@
+<html>
+<head>
+	<title> - Obsterics</title>
+	<link rel="stylesheet" type="text/css" href="cs/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="obsteric.css">
+	<script type="text/javascript" src="cs/bootstrap.min.js"></script>
+  <script type="text/javascript" src="cs/obstetrics.js"></script>
+  <script type="text/javascript" src="babies.js"></script>
+  <meta charset="UTF-8"> 
+</head>
+<body>
+  <div class="shadow-lg p-4 mb-4 bg-white" id="tagP">
+    <a href="home.html" class="btn btn-info float-left" style="margin-right:10px;">Home</a>
+    <button onclick="myFunction()" ondblclick="myFunction1()" class="btn btn-primary float-left" style="margin-right:10px;">Print</button>
+    <form name="putdate">
+    <button onclick="Reload()" class="btn btn-primary float-right" style="margin-left:10px;">Refresh</button>
+    <input type="button" Value="Save" class="btn btn-success float-right" onclick="saveData()" style="margin-left:10px;" /> 
+        <input type="button" value="Auto-Fill" class="btn btn-dark float-right"  onclick="tDay()"/>
+	</div>
+	<div class="container" id="firstP">
+		<div class="shadow p-4 mb-4 bg-white">
+				<table class="table">
+    				<thead>
+      					<tr>
+        					<th>Name: </th>
+        					<th><input type="text" class="form-control" name="patientname"><!-- -plaintext--></th>
+      					</tr>
+      					<tr>
+        					<th>Hospital/ clinician’s name: </th>
+        					<th><input type="text" class="form-control" name="hospitalname"><!-- -plaintext--></th>
+      					</tr>
+      					<tr>
+        					<th>Date: </th>
+        					<th><input type="text" class="form-control" name="tday" value=""><!-- -plaintext--></th>
+      					</tr>
+    				</thead>
+				</table>
+				<h4 class="text-center addstyle">OBSTETRICS SCAN</h4>
+				<div class="row">
+  					<div class="col-sm-4">
+  						<table class="table">
+							<tbody>
+								<tr>
+        							<td>Uterus :  </td>
+      							</tr>
+      							<tr>
+        							<td>Number Of Gestation :</td>
+      							</tr>
+      							<tr>
+        							<td>Presentation :  </td>
+      							</tr>
+      							<tr>
+        							<td>Lie As Today :  </td>
+      							</tr>
+      							<tr>
+        							<td>Foetal Well-Being :  </td>
+      							</tr>
+      							<tr>
+        							<td>Foetal Cardiac Pulsations :  </td>
+      							</tr>
+      							<tr>
+        							<td>Foetal Limb Movements :  </td>
+      							</tr>
+      							<tr>
+        							<td>Placenta  Location :  </td>
+      							</tr>
+      							<tr>
+        							<td>Placenta Maturation Grade :  </td>
+      							</tr>
+      							<tr>
+        							<td>Placenta Praevia Type (If Any) :  </td>
+      							</tr>
+      							<tr>
+        							<td>Internal Cervical Os :  </td>
+      							</tr>
+      							<tr>
+        							<td>Amniotic Fluid Content :  </td>
+      							</tr>
+      							<tr>
+        							<td>Gross Foetal Abnormality Discovered :  </td>
+      							</tr>
+      							<tr>
+        							<td>Adnexal Pathology Discovered :  </td>
+      							</tr>
+      							<tr>
+        							<td>Other Uterine Masses Discovered :  </td>
+      							</tr>
+      							<tr>
+        							<td>Foetal Present Weight :  </td>
+      							</tr>
+      							<tr>
+        							<td>Likely Gender :  </td>
+      							</tr>
+      							<tr>
+        							<td>BPD =  <input type="text" class="form-control2" name="bpd">  </td>
+      							</tr>
+      							<tr>
+        							<td>FL =  <input type="text" class="form-control2" name="fl"></td>
+      							</tr>
+      							<tr>
+        							<td>Expected date of delivery :  </td>
+      							</tr>
+      							<tr>
+        							<td>Diagnosis / impression :  </td>
+      							</tr>
+      						<tbody>
+      					</table>
+      				</div>
+  					<div class="col-sm-4">
+  						<table class="table1">
+							<tbody>
+								<tr>
+        							<td><input type="text" class="form-control1" name="uterus"> </td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="gestation"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="lieas"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="foewell"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="foecar"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="foelim"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="plalo"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="plama"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="plapra"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="internalos"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="amniotic"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="grossfoe"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="adnexal"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="otherut"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="foetalwei"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="lgender"></td>
+      							</tr>
+      							<tr>
+        							<td>MM  <input type="text" class="form-control2" name="bweek"> MM WEEKS <input type="text" class="form-control2" name="bday"> Days + 2/47</td>
+      							</tr>
+      							<tr>
+        							<td>MM  <input type="text" class="form-control2" > MM WEEKS <input type="text" class="form-control2" > Days + 2/47</td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control" name="expd"></td>
+      							</tr>
+      							<tr>
+        							<td><input type="text" class="form-control1" name="impression"></td>
+      							</tr>
+      						<tbody>
+      					</table>
+      				</div>
+  					<div class="col-sm-4">
+  						....
+  					</div>
+
+            </form>
+          </div>
+      </div>
+  </div>
+<!--- printed document-->
+<div class="container  marcon">
+    <div class="row">
+        <div class="col-sm-2">
+           <img src="cs/logo.png" height="" weight="">
+        </div>
+        <div class="col-sm-8 text-center">
+          <h1>DIVINE FAVOUR DIAGNOSTIC SERVICES</h1>
+          <p>3, LALA ROAD,( Beside Baba Are Car Wash), <br />Ayobo, Lagos State.<br />
+            <u>MAMMOGRAPHY/ ECG/ LAB/SCAN/X-RAY REPORT2D COLOUR DOPPLER/ 3D/ USS</u><br />
+            RADIOLOGIST/ SONOGRAPHIC REPORT</p>
+        </div>
+    </div>
+  </div>
+  <div class="container  marcon">
+    <div class="shadow p-4 mb-4 bg-white">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th>Name: </th>
+                  <th><script type="text/javascript">
+                  document.write(sessionStorage.getItem("patient_name"));
+                </script>
+              </th>
+                </tr>
+                <tr>
+                  <th>Hospital/ clinician’s name: </th>
+                  <th><script type="text/javascript">
+                  document.write(sessionStorage.getItem("hospital_name"));
+                </script></th>
+                </tr>
+                <tr>
+                  <th>Date: </th>
+                  <th><script type="text/javascript">
+                  document.write(sessionStorage.getItem("da_te"));
+                </script></th>
+                </tr>
+            </thead>
+        </table>
+        <h4 class="text-center addstyle">OBSTETRICS SCAN</h4>
+        <div class="row">
+            <div class="col-sm-4">
+              <p>Uterus : </p> 
+              <p>Number Of Gestation :</p>
+              <p>Presentation :  </p>
+              <p>Lie As Today :  </p>
+              <p>Foetal Well-Being :  </p>
+              <p>Foetal Cardiac Pulsations :  </p>
+              <p>Foetal Limb Movements :  </p>
+              <p>Placenta  Location :  </p>
+              <p>Placenta Maturation Grade :  </p>
+              <p>Placenta Praevia Type (If Any) :  </p>
+              <p>Internal Cervical Os :  </p>
+              <p>Amniotic Fluid Content :  </p>
+              <p>Gross Foetal Abnormality Discovered :  </p>
+              <p>Adnexal Pathology Discovered :  </p>
+              <p>Other Uterine Masses Discovered :  </p>
+              <p>Foetal Present Weight :  </p>
+              <p>Likely Gender :  </p>
+              <p>BPD =  <script type="text/javascript">
+                  document.write(sessionStorage.getItem("bpd_name"));
+                </script>  </p>
+              <p>FL =  <script type="text/javascript">
+                  document.write(sessionStorage.getItem("fl_name"));
+                </script> </p>
+              <p>Expected date of delivery :  </p>
+              <p>Diagnosis / impression :  </p>
+              </div>
+            <div class="col-sm-5">
+              <p><script type="text/javascript">
+                  document.write(sessionStorage.getItem("u_name"));
+                </script></p> 
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("nog_name"));
+                </script></p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("p_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("lat_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("fwb_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("fcp_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("flm_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pl_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pmg_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("ppt_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("ico_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("afc_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("gfad_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("apd_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("oumd_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("fpw_name"));
+                </script>
+              </p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("lg_name"));
+                </script>
+              </p>
+
+              <p>MM  "<script type="text/javascript">
+                  document.write(sessionStorage.getItem("week_name"));
+                </script>" MM WEEKS "<script type="text/javascript">
+                  document.write(sessionStorage.getItem("day_name"));
+                </script>" Days + 2/47</p>
+              <p>MM  "<script type="text/javascript">
+                  document.write(sessionStorage.getItem("week_name"));
+                </script>" MM WEEKS "<script type="text/javascript">
+                  document.write(sessionStorage.getItem("day_name"));
+                </script>" Days + 2/47</p>
+              <p>
+                <script type="text/javascript">
+                  document.write(sessionStorage.getItem("edd_name"));
+                </script>
+              </p>
+              <p>A viable and active foetus in an cephalic presentation & longitudinal lie at <script type="text/javascript">
+                  document.write(sessionStorage.getItem("week_name"));
+                </script> weeks <script type="text/javascript">
+                  document.write(sessionStorage.getItem("day_name"));
+                </script> days</p>
+              </div>
+            <div class="col-sm-2"><br/><br/><br/><br/><br/>
+              <img id="imgcon" src="" class="baby" width="263px" height="269px;">
+                  <div id="buttons" class="baby">
+                      <button onclick="baby1()" >B1</button>
+                      <button onclick="baby2()">B2</button>
+                      <button onclick="baby3()">B3</button>
+                      <button onclick="baby4()">B4</button>
+                      <button onclick="baby5()">B5</button>
+                      <button onclick="baby6()">B6</button>
+                      <button ondblclick="removeb()">RM</button>
+                  </div>
+            </div>
+          </div>
+            <p class="text-right" style="padding-right:20px;padding-top:60px;">
+            <b>..............................................<br />
+            SONOGRAPHER/RADIOLOGIST</b> </p>
+            <hr>
+            <div>
+              <b>Tel: 08053418070 / 09095358427</b>
+            </div>
+</body>
+</html>

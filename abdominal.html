@@ -1,0 +1,168 @@
+<html>
+<head>
+  <title> - Abdominal</title>
+  <link rel="stylesheet" type="text/css" href="cs/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="abdominal.css">
+  <script type="text/javascript" src="cs/bootstrap.min.js"></script>
+  <script type="text/javascript" src="cs/abdominal.js"></script>
+  <meta charset="UTF-8"> 
+  <style type="text/css">
+  </style>
+</head>
+<body>
+  <div class="shadow-lg p-4 mb-4 bg-white"id="tagP">
+    <a href="home.html" class="btn btn-info float-left" style="margin-right:10px;">Home</a>
+    <button onclick="myFunction()" ondblclick="myFunction1()" class="btn btn-primary float-left" style="margin-right:10px;">Print</button>
+    <form name="putdate">
+    <button onclick="Reload()" class="btn btn-primary float-right" style="margin-left:10px;">Refresh</button>
+    <input type="button" Value="Save" class="btn btn-success float-right" onclick="saveData()" style="margin-left:10px;" /> 
+        <input type="button" value="Auto-Fill" class="btn btn-dark float-right"  onclick="tDay()"/>
+  </div>
+  <div class="container" id="firstP">
+    <div class="shadow p-4 mb-4 bg-white">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                  <th>Patient:
+                  <input type="text" class="form-control" name="p_name" > </th>
+                  <th>Report:
+                  <input type="text" class="form-control" name="tday" value=""> </th>
+                </tr>
+                <tr>
+                  <th>Age:
+                  <input type="text" class="form-control" name="psex"> </th>
+                  <th>Sex:
+                  <input type="text" class="form-control" name="page"> </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="text-center"><h5><b><u>ABDOMINAL SONOGRAPHY</u></b></h5></div>
+          <table>
+              <tbody>
+                <tr>
+                  <td>LIVER: </td>
+                  <td><textarea name="pliver" class="form-control" rows="2" cols="100"></textarea></td>
+                </tr>
+                 <tr>
+                  <td>GALL BLADDER: </td>
+                  <td><textarea name="pgall" class="form-control" rows="2" cols="100"></textarea></td>
+                </tr>
+                 <tr>
+                  <td>PANCREAS: </td>
+                  <td><textarea name="ppancreas" class="form-control" rows="2" cols="100"></textarea></td>
+                </tr>
+                 <tr>
+                  <td>SPLEEN: </td>
+                  <td><textarea name="pspleen" class="form-control" rows="2" cols="100"></textarea></td>
+                </tr>
+                 <tr>
+                  <td>PORTAL VEINS: </td>
+                  <td><textarea name="pportal" class="form-control" rows="2" cols="100"></textarea></td>
+                </tr>
+                 <tr>
+                  <td>KIDNEYS: </td>
+                  <td><textarea name="pkidneys" class="form-control" rows="2" cols="100"></textarea></td>
+                </tr>
+                 <tr>
+                  <td>K: </td>
+                  <td><textarea name="pothers" class="form-control" rows="3" cols="100"></textarea></td>
+                </tr>
+                 <tr>
+                  <td>IMPRESSION: </td>
+                  <td><textarea name="pimpression" class="form-control" rows="4" cols="100"></textarea></td>
+                </tr>
+              </tbody>
+          </table>
+         
+
+            </form>
+    </div>
+  </div>
+      <!-- printed output -->
+      <div class="container  marcon">
+    <div class="row" style="border-bottom:1px solid black;">
+        <div class="col-sm-2">
+           <img src="cs/logo.png" height="" weight="">
+        </div>
+        <div class="col-sm-8 text-center">
+          <h1>DIVINE FAVOUR DIAGNOSTIC SERVICES</h1>
+          <p>3, LALA ROAD,( Beside Baba Are Car Wash), <br />Ayobo, Lagos State.</p>
+        </div>
+    </div>
+
+  </div>
+  <div class="container  marcon">
+    <div class="shadow p-4 mb-4 bg-white">
+        <table class="table table-borderless ">
+            <thead>
+                <tr>
+                  <th>Name Of Patient:  <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pta_name"));
+                </script>  </th>
+                  <th>Report: <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pd_name"));
+                </script> </th>
+                </tr>
+                <tr>
+                  <th>Age: <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pa_name"));
+                </script> 
+                </th>
+                <th>Sex:  <script type="text/javascript">
+                  document.write(sessionStorage.getItem("ps_name"));</script></th>
+                </tr>
+            </thead>
+        </table>
+        <div class="text-center"><h5><b><u>ABDOMINAL SONOGRAPHY</u></b></h5></div>
+        <div>
+          <p class="preview"><b>LIVER:</b>
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pl_name"));
+                </script>
+          </p>
+          <p class="preview"><b>GALL BLADDER:</b>  
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pg_name"));
+                </script>
+          </p>
+          <p class="preview"><b>PANCREAS: </b>
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pp_name"));
+            </script>
+          </p>
+          <p class="preview"><b>SPLEEN: </b>
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("psp_name"));
+                </script>
+          </p>
+          <p class="preview"><b>PORTAL VEINS: </b>
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pt_name"));
+                </script>
+          </p>
+          <p class="preview"><b>KIDNEYS:</b> 
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pk_name"));
+                </script>
+          </p>
+          <p class="preview">
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("po_name"));
+                </script>
+          </p>
+          <p class="preview"><b>IMPRESSION:</b> 
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("pi_name"));
+                </script>
+          </p>
+        </div>
+            <p class="text-right" style="padding-right:20px;padding-top:80px;">
+            <b>..............................................<br />
+            CONSULTANT RADIOLOIST</b> </p>
+            <hr>
+            <div>
+              <b>Tel: 08053418070 / 09095358427</b>
+            </div>
+    
+</body>
+</html>

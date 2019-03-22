@@ -1,0 +1,152 @@
+<html>
+<head>
+	<title> - Pelvic</title>
+	<link rel="stylesheet" type="text/css" href="cs/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="pelvic.css">
+	<script type="text/javascript" src="cs/bootstrap.min.js"></script>
+  <script type="text/javascript" src="cs/pelvic.js"></script>
+  <meta charset="UTF-8"> 
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div class="shadow-lg p-4 mb-4 bg-white"id="tagP">
+    <a href="home.html" class="btn btn-info float-left" style="margin-right:10px;">Home</a>
+    <button onclick="myFunction()" ondblclick="myFunction1()" class="btn btn-primary float-left" style="margin-right:10px;">Print</button>
+    <form name="putdate">
+    <button onclick="Reload()" class="btn btn-primary float-right" style="margin-left:10px;">Refresh</button>
+    <input type="button" Value="Save" class="btn btn-success float-right" onclick="saveData()" style="margin-left:10px;" /> 
+        <input type="button" value="Auto-Fill" class="btn btn-dark float-right"  onclick="tDay()"/>
+  </div>
+  <div class="container" id="firstP">
+		<div class="shadow p-4 mb-4 bg-white">
+				<table class="table table-bordered">
+    				<thead>
+      					<tr>
+        					<th>Name Of Patient:
+                  <input type="text" class="form-control" name="pname" value=""> </th>
+        					<th>Hospital / Clinic:
+                  <input type="text" class="form-control1" name="clinicname"> </th>
+      					</tr>
+                <tr>
+                  <th>Age / Sex:
+                  <input type="text" class="form-control1" name="asex"> </th>
+                  <th>Date / Time:
+                  <input type="text" class="form-control1" name="tday" value=""> </th>
+                </tr>
+    				</thead>
+				</table>
+				<div class="text-center"><h4 class=" addstyle btn btn-outline-dark"><b>PELVIC SCAN</b></h4></div>
+        <div class="text-center">
+          <textarea name="tbody" rows="2" cols="100"></textarea><br /><br />
+          <textarea name="tbody1" rows="2" cols="100"></textarea><br /><br />
+          <textarea name="tbody2" rows="2" cols="100"></textarea><br /><br />
+          <textarea name="tbody3" rows="2" cols="100"></textarea>
+          </div>
+	
+  					<div style="font-size:20px;border:2px solid #000000;">
+                <p style="padding-left:20px;"><b><u>IMPRESSION</u></b>
+                  <ul style="list-style-type:square">
+                     <li><input type="text" class="form-control1" name="impression1"></li>
+                     <li><input type="text" class="form-control1" name="impression2"></li>
+                      <li><input type="text" class="form-control1" name="impression3"></li>
+                  </ul></p>
+  						</div>
+            </form>
+</div>
+</div>
+    	<!-- printed output -->
+      <div class="container  marcon">
+    <div class="row">
+        <div class="col-sm-2">
+           <img src="cs/logo.png" height="" weight="">
+        </div>
+        <div class="col-sm-8 text-center">
+          <h1>DIVINE FAVOUR DIAGNOSTIC SERVICES</h1>
+          <p>3, LALA ROAD,( Beside Baba Are Car Wash), <br />Ayobo, Lagos State.<br />
+            <u>MAMMOGRAPHY/ ECG/ LAB/SCAN/X-RAY REPORT2D COLOUR DOPPLER/ 3D/ USS</u><br />
+            RADIOLOGIST/ SONOGRAPHIC REPORT</p>
+        </div>
+    </div>
+  </div>
+  <div class="container  marcon">
+    <div class="shadow p-4 mb-4 bg-white">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                  <th>Name Of Patient:
+                  <p><script type="text/javascript">
+                  document.write(sessionStorage.getItem("pt_name"));
+                </script></p> </th>
+                  <th>Hospital / Clinic:
+                  <p><script type="text/javascript">
+                  document.write(sessionStorage.getItem("clinic_name"));
+                </script></p> </th>
+                </tr>
+                <tr>
+                  <th>Age / Sex:
+                  <p><script type="text/javascript">
+                  document.write(sessionStorage.getItem("asex_name"));
+                </script></p> </th>
+                  <th>Date / Time:
+                  <p><script type="text/javascript">
+                  document.write(sessionStorage.getItem("tday_name"));
+                </script></p> </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="text-center"><h4 class=" addstyle btn btn-outline-dark"><b>PELVIC SCAN</b></h4></div>
+        <div>
+          <p class="preview">
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("tbody1_name"));
+                </script>
+          </p>
+          <p class="preview">
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("tbody1_name"));
+                </script>
+          </p>
+          <p class="preview2">
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("tbody2_name"));
+            </script>
+          </p>
+          <p class="preview2">
+            <script type="text/javascript">
+                  document.write(sessionStorage.getItem("tbody3_name"));
+                </script>
+          </p>
+        </div>
+  
+            <div style="font-size:20px;border:2px solid #000000;">
+                <p style="padding-left:20px;"><b><u>IMPRESSION</u></b>
+                  <ul style="list-style-type:square">
+                     <script type="text/javascript"> 
+                     if(sessionStorage.getItem("impression1_name") != "" ){
+                          document.write("<li>" + sessionStorage.getItem("impression1_name") + "</li>");
+                      }
+                </script>
+                     <script type="text/javascript"> 
+                     if(sessionStorage.getItem("impression2_name") != "" ){
+                          document.write("<li>" + sessionStorage.getItem("impression2_name") + "</li>");
+                      }
+                </script>
+                      <script type="text/javascript">
+                      if(sessionStorage.getItem("impression3_name") != "" ){
+                          document.write("<li>" + sessionStorage.getItem("impression3_name") + "</li>");
+                      }
+                  
+                </script>
+                  </ul></p>
+              </div>
+            <p class="text-right" style="padding-right:20px;padding-top:80px;">
+            <b>..............................................<br />
+            CONSULTANT RADIOLOIST</b> </p>
+            <hr>
+            <div>
+              <b>Tel: 08053418070 / 09095358427</b>
+            </div>
+		
+</body>
+</html>
