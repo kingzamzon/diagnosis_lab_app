@@ -1,0 +1,21 @@
+	.addplus{
+			font-size: 100px;
+		}
+		.form-control1{width:100%;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}
+		.form-control2{width:15%;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}
+		.table1{width:100%;max-width:100%;margin-bottom:1rem;background-color:transparent}
+		.table1 td,.table1 th{padding:.60rem;vertical-align:top;}
+		.table1 thead th{vertical-align:bottom;}
+		.table1 tbody+tbody{}
+	.preview{
+			padding-top:20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+		}
+    .preview2{
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 20px;
+    }
